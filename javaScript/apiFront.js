@@ -7,6 +7,8 @@ const publishPost = document.querySelector('#publishPost');
 
 export const publicUrl = 'https://apibackenddesafiojs-production.up.railway.app/';
 
+export const homeFront = 'https://front-end-desafio-js.vercel.app/';
+
 
 if(publishPost){
   publishPost.addEventListener('click',()=>{
@@ -48,7 +50,7 @@ const publishDataPost = async(data)=>{
     const response = await fetch(`${publicUrl}createPost`,options);//'http://localhost:4000/createPost'
     const result = await response.json();
     console.log('Result createPost:..',result);
-    if (result) window.location.href='http://127.0.0.1:5500/projectJS/index.html';
+    if (result) window.location.href= homeFront; //'http://127.0.0.1:5500/projectJS/index.html'
   } catch (error) {
     console.log(error)
   }
