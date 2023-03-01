@@ -49,7 +49,7 @@ const publishDataPost = async(data)=>{
     body: JSON.stringify(data)
   }
   try {
-    const response = await fetch(`${publicUrl}createPost`,options);//'http://localhost:4000/createPost'
+    const response = await fetch(`${publicUrl}`,options);//'http://localhost:4000/createPost' //createPost
     const result = await response.json();
     console.log('Result createPost:..',result);
     if (result) window.location.href= homeFront; //'http://127.0.0.1:5500/projectJS/index.html'
