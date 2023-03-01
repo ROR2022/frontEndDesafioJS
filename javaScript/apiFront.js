@@ -60,7 +60,7 @@ const publishDataPost = async(data)=>{
 
 export const getLastPost = async ()=>{
   try {
-    const response = await fetch(`${publicUrl}getLastPost`); //'http://localhost:4000/getLastPost'
+    const response = await fetch(`${publicUrl}`); //'http://localhost:4000/getLastPost' //getLastPost
     const result = await response.json();
     console.log('Result getLastPost:..',result);
     return result
