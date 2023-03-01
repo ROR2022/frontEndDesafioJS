@@ -15,7 +15,7 @@ const id = myQuery.get('id');
 
 const recuperaData = async (id)=>{
   try {
-    const response = await fetch(`${publicUrl}${id}`); //`http://localhost:4000/getPost/${id}`
+    const response = await fetch(`${publicUrl}/${id}`); //`http://localhost:4000/getPost/${id}`
     const result = await response.json();
     if(result.dataPost?.titlePost) showDataPost(result.dataPost);
     console.log('result recuperarData:..',result);
