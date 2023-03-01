@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
+    <title>Login DesafioJS</title>
+</head>
+<body>
+  <header>
+    <div class="container-fluid fixed-top">        
+        <div class="row" id="principal">
+            <div class="col-5 d-flex align-content-center">  
+                <nav class="navbar top d-flex justify-content-end d-md-none d-sm-block" id="menu">
+                    <div class="container ">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DEV Community 👩‍💻👨‍💻</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menu__list">
+                            <li class="nav-item"><a class="nav-link active" href="#">🏠 Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">📖 Reading List</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">📃 Listings</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🎙 Podcasts</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🎥 Videos</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🏷 Tags</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">💡 FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🛍 Forem Shop</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">♥ Sponsors</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">⁉ About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">📯 Contact</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">📖 Guides</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🤔 Software Comparison</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🏠 Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">🏠 Home</a></li>
+                          </ul>
+                          <div class="offcanvas-subtitle"><h5>Other</h5></div>
+                          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="menu__list2">
+                            <li class="nav-item"><a class="nav-link active" href="#">👍 Code of Conduct</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">😎 Privacy Policy</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#">📜 Terms of use</a></li>
+                          </ul>
+                          <div class="aside__icons__all">       
+                            <ul>
+                                <li  class="nav-item"> <a href="#"><img src="./img/twitter-svgrepo-com.svg" width="30" height="30" alt="Twitter-icon" /></a></li>
+                                <li  class="nav-item"><a href="#"><img src="./img/facebook-svgrepo-com.svg" width="30" height="30" alt="Facebook-icon" /></a></li>
+                                <li  class="nav-item"><a href="#"><img src="./img/github-svgrepo-com.svg" width="30" height="30" alt="Github-icon" /></a></li>
+                                <li  class="nav-item"> <a href="#"><img src="./img/instagram-alt-svgrepo-com.svg" width="30" height="30" alt="Instagram-logo" /></a></li>
+                                <li  class="nav-item"> <a href="#"><img src="./img/twitch-svgrepo-com.svg" width="30" height="30" alt="twitch-logo" /></a>    </li>
+                            </ul>                                                                                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </nav>                    
+
+             <div class="logo"><a href="index.html"><img src="./img/logo.png" width="50" height="50" alt=""></a></div>
+                <nav class="navbar" id="search">
+                    <div class="container-fluid">
+                      <form class="d-flex" role="search" id="form__main">
+                        <input class="form-control me-5" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn" type="submit"><img src="./img/searchmagnifierinterfacesymbol1_79893.svg" width="30" height="30" alt=""></button>
+                     </form>
+                    </div>
+                  </nav>
+            </div>
+            <div class="col" >
+                <div class="gral__icons">
+                    <button class="btn btn" type="submit" id="search__main"><img src="./img/searchmagnifierinterfacesymbol1_79893.svg" width="30" height="30" alt=""></button>
+                    <a class="btn btn-primary" href="./createPost.html" id="boton">Create Post</a>
+                    <a href="#"><img src="./img/bell-svgrepo-com.svg" width="30" height="30" alt=""></a>
+                    <a href="#"><img src="./img/profile.jpg" width="30" height="30"  class="profile" alt=""></a>
+                </div>
+            </div>
+        </div>       
+    </div>        
+</header>
+
+<main>
+  <div style="width: 350px;" class="d-block ms-auto me-auto text-center">
+    <div class="border border-3 my-3 rounded">
+      <img style="width: 25px;" src="./images/googleLogo1.png" alt="">
+      <span class="fs-5 me-2">Entrar con Google</span>
+    </div>
+      <div class="border border-3 rounded">
+        <img style="width: 30px;" src="./images/facebookLogo1.png" alt="">
+        <span class="fs-5 me-1">Entrar con Facebook</span>
+      </div>
+  </div>
+</main>
+
+<footer class="footer__text">
+  <div>
+    <a href="#">DEV Community 👩‍💻👨‍💻</a>— A constructive and inclusive social network for software developers. With you every step of your journey.
+     Built on <a href="#"> Forem</a>— the <a href="#">open source</a> software that powers <a href="#">DEV</a> and other inclusive communities.
+      Made with love and <a href="#">Ruby on Rails</a>. DEV Community 👩‍💻👨‍💻 © 2016 - 2022.            
+ </div>
+ <div class="footer__img">
+     🌱
+ </div>
+</footer>
+</body>
+</html>

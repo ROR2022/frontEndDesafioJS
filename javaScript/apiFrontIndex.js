@@ -18,7 +18,7 @@ getLastPost()
       const dataMainPost = lastPost[0];
       titlePost.addEventListener('click',()=>{
             console.log('Mostraremos el Post que corresponda:..',dataMainPost);
-            window.location.href=`../projectJS/articule.html?id=${dataMainPost._id}`;
+            window.location.href=`../articule.html?id=${dataMainPost._id}`;
       })
     } 
   })
