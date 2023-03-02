@@ -44,7 +44,7 @@ const recuperaData = async (id)=>{
   
   }
 
-  const botonSave = document.querySelector("#publishPost")
+  const botonSave = document.querySelector("#publishEditPost")
   if(botonSave){
     botonSave.addEventListener('click',()=>{
         const dataPost={
