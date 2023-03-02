@@ -11,7 +11,8 @@ const passwordUserConfirm = document.querySelector('#passwordUserRegisterConfirm
 const botonRegister = document.querySelector('#botonRegister');
 
 if (botonRegister){
-  botonRegister.addEventListener('click',async ()=>{
+  botonRegister.addEventListener('click',async (e)=>{
+    e.preventDefault();
     if (passwordUser.value===passwordUserConfirm.value){
       const dataUser = {
         avatarUrl: avatarUser.value,
