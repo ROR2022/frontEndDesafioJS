@@ -1,4 +1,4 @@
-import { publicUrl } from "./apiFront.js";
+import { publicUrl, deletePost } from "./apiFront.js";
 
 console.log('Hola desde el Article Principal:..');
 
@@ -29,6 +29,12 @@ if(id){
   //mostraremos los datos en article.html
   //primero recuperamos los datos correspodientes al "id"
   recuperaData(id);
+  const botonEdit = document.querySelector("#botonEdit");
+  botonEdit.href = `/editPost.html?id=${id}`
+  const botonDelete = document.querySelector("#botonDelete");
+  botonDelete.addEventListener('click', () =>{
+    deletePost(id);
+  })
   //console.log('dataArticle:..',dataArticle);
 }
 
