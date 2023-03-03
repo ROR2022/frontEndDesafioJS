@@ -1,7 +1,7 @@
 import { homeFront } from "./apiFront.js";
 import { enviarLogin } from "./apiUser.js";
 import { dataUserLogged } from "./apiFrontIndex.js";
-import { homeFront } from "./apiFront.js";
+//import { homeFront } from "./apiFront.js";
 
 console.log('Hola desde Login:..');
 
