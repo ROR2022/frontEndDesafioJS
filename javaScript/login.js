@@ -27,7 +27,7 @@ if (botonLogin){
           dataUserLogged.logged= true;
 
           const dataContainer = document.querySelector('#dataUserContainer');
-          const avatarUser = document.querySelector('#avatarUserLogged');
+          const avatarUser = document.querySelector('#imageUserLogged');
           const nameUserLogged = document.querySelector('#nameUserLogged');
 
           dataContainer.className= 'd-block';
