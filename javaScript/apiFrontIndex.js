@@ -1,7 +1,7 @@
 import { getLastPost } from "./apiFront.js";
 import { card } from "./card.js";
 
-var dataUserLogged ={
+export const dataUserLogged ={
   name: '',
   avatarUrl: '',
   email: '',
