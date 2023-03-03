@@ -20,7 +20,7 @@ if(publishPost){
       urlImage: urlImage.value,
       titlePost: titlePost.value,
       textPost: postText.value.trim(),
-      user: dataUserLogged
+      user: dataUserLogged.id
     } 
     //getSaludo();
     publishDataPost(dataPost);
