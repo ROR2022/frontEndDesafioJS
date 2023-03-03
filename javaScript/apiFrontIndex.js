@@ -2,10 +2,10 @@ import { getLastPost } from "./apiFront.js";
 import { card } from "./card.js";
 
 export const dataUserLogged ={
-  name: '',
-  avatarUrl: '',
-  email: '',
-  logged: false
+  name: window.localStorage.getItem('nameUser')||'',
+  avatarUrl: window.localStorage.getItem('avatarUrl')||'',
+  email: window.localStorage.getItem('emailUser')||'',
+  id: window.localStorage.getItem('idUser')||''
 }
 
 getLastPost()
@@ -36,7 +36,7 @@ getLastPost()
     console.log(err);
   });
 
-  if(dataUserLogged.logged){
+  if(dataUserLogged.id){
     const avatarUserLogo = document.querySelector('#avatarUserLogo');
     if (avatarUserLogo){
       avatarUserLogo.src= dataUserLogged.avatarUrl;

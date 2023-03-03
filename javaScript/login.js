@@ -21,21 +21,21 @@ if (botonLogin){
       const getLogin = await enviarLogin(dataUser);
       console.log('getLogin:..',getLogin);
       if (getLogin.findUser?.email){
-          dataUserLogged.name= getLogin.findUser.name;
-          dataUserLogged.avatarUrl= getLogin.findUser.avatarUrl;
-          dataUserLogged.email= getLogin.findUser.email;
-          dataUserLogged.logged= true;
+          window.localStorage.setItem('avatartUrl',getLogin.findUser.avatarUrl);
+          window.localStorage.setItem('nameUser',getLogin.findUser.name);
+          window.localStorage.setItem('idUser',getLogin.findUser._id);
+          window.localStorage.setItem('emailUser',getLogin.findUser.email);
 
-          const dataContainer = document.querySelector('#dataUserContainer');
+         /*  const dataContainer = document.querySelector('#dataUserContainer');
           const avatarUser = document.querySelector('#imageUserLogged');
           const nameUserLogged = document.querySelector('#nameUserLogged');
 
           dataContainer.className= 'd-block ms-auto me-auto mt-3';
           avatarUser.src= dataUserLogged.avatarUrl;
-          nameUserLogged.textContent = dataUserLogged.name;
+          nameUserLogged.textContent = dataUserLogged.name; */
         
       }
-      //if (getLogin) window.location.href = homeFront;
+      if (getLogin) window.location.href = homeFront;
     } catch (error) {
       console.log(error);
     }
