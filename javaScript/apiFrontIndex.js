@@ -37,6 +37,7 @@ getLastPost()
   });
 
   if(dataUserLogged.id){
+    console.log('dataUserLogged:..',dataUserLogged);
     const avatarUserLogo = document.querySelector('#avatarUserLogo');
     if (avatarUserLogo){
       avatarUserLogo.src= dataUserLogged.avatarUrl;
