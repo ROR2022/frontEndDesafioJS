@@ -1,6 +1,6 @@
 import { homeFront } from "./apiFront.js";
 import { enviarLogin } from "./apiUser.js";
-import { dataUserLogged } from "./apiFrontIndex.js";
+//import { dataUserLogged } from "./apiFrontIndex.js";
 
 console.log('Hola desde Login:..');
 
@@ -21,11 +21,10 @@ if (botonLogin){
       const getLogin = await enviarLogin(dataUser);
       console.log('getLogin:..',getLogin);
       if (getLogin.findUser?.email){
-         
-          dataUserLogged.name= getLogin.findUser.name;
-          dataUserLogged.avatarUrl= getLogin.findUser.avatarUrl;
-          dataUserLogged.email= getLogin.findUser.email;
-          dataUserLogged.logged= true;
+          window.dataUserLogged.name= getLogin.findUser.name;
+          window.dataUserLogged.avatarUrl= getLogin.findUser.avatarUrl;
+          window.dataUserLogged.email= getLogin.findUser.email;
+          window.dataUserLogged.logged= true;
         
       }
       //if (getLogin) window.location.href = homeFront;
