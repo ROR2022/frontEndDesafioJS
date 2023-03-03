@@ -21,12 +21,12 @@ if (botonLogin){
       const getLogin = await enviarLogin(dataUser);
       console.log('getLogin:..',getLogin);
       if (getLogin.findUser?.email){
-         dataUserLogged ={
-          name: getLogin.findUser.name,
-          avatarUrl: getLogin.findUser.avatarUrl,
-          email: getLogin.findUser.email,
-          logged: true
-        }
+         
+          dataUserLogged.name= getLogin.findUser.name;
+          dataUserLogged.avatarUrl= getLogin.findUser.avatarUrl;
+          dataUserLogged.email= getLogin.findUser.email;
+          dataUserLogged.logged= true;
+        
       }
       if (getLogin) window.location.href = homeFront;
     } catch (error) {
