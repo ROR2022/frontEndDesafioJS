@@ -1,4 +1,5 @@
 import { getLastPost } from "./apiFront.js";
+import { getDataUser } from "./apiUser.js";
 import { card } from "./card.js";
 
 export const dataUserLogged ={
@@ -14,8 +15,13 @@ const showPosts = async ()=>{
     if (getPosts){
       const { lastPost } = getPosts;
       if (lastPost) {
-        lastPost.map((item)=>{
-          card(item);
+        lastPost.map(async (item)=>{
+          const getDataUserResult = await getDataUser(item.user);
+          console.log('getDataUserResult:..',getDataUserResult);
+          if (getDataUserResult){
+            card(item,getDataUserResult);
+          }
+          
         })
       }
     }
@@ -24,33 +30,7 @@ const showPosts = async ()=>{
   }
 }
 
-/*getLastPost()
-  .then((dataLastPost) => {
-    
-    const { lastPost } = dataLastPost;
-    // const mainPicture = document.querySelector("#mainPicture");
-    // const titlePost = document.querySelector('#title-link');
-    // const imageSecondPost = document.querySelector('#imageSecondPost');
-    // const secondTitlePost = document.querySelector('#title-link2');
-    if (lastPost) {
-      //console.log('image:..',lastPost[0].urlImage);
-      // mainPicture.src = lastPost[0].urlImage;
-      // titlePost.textContent= lastPost[0].titlePost;
-      // imageSecondPost.src = lastPost[1].urlImage;
-      // secondTitlePost.textContent = lastPost[1].titlePost;
-      lastPost.map((item)=>{
-        card(item);
-      })
-      // const dataMainPost = lastPost[0];
-      // titlePost.addEventListener('click',()=>{
-      //       console.log('Mostraremos el Post que corresponda:..',dataMainPost);
-      //       window.location.href=`../articule.html?id=${dataMainPost._id}`;
-      // })
-    } 
-  })
-  .catch((err) => {
-    console.log(err);
-  });*/
+
 
   const botonCreatePost = document.querySelector('#botonCreatePost');
 

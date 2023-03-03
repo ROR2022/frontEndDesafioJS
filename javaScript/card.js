@@ -1,7 +1,7 @@
 
 const dashboard = document.querySelector("#dashboard");
 
- export const card = (publicacion) => {
+ export const card = (publicacion,dataUser) => {
     console.log(publicacion)
   //contenedor principal
   const cardPublicacion = document.createElement("div");
