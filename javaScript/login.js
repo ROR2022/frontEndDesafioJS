@@ -41,3 +41,14 @@ if (botonLogin){
     }
   })
 }
+
+const botonLogOut = document.querySelector('#botonLogOut');
+
+if (botonLogOut){
+    botonLogOut.addEventListener('click',()=>{
+          window.localStorage.setItem('avatarUrl','');
+          window.localStorage.setItem('nameUser','');
+          window.localStorage.setItem('idUser','');
+          window.localStorage.setItem('emailUser','');
+    })
+}
