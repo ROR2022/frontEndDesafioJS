@@ -16,17 +16,13 @@ const showPosts = async ()=>{
       const { lastPost } = getPosts;
       if (lastPost) {
         lastPost.map(async (item)=>{
-          if(item.user){
+          
             const getDataUserResult = await getDataUser(String(item.user));
             console.log('getDataUserResult:..',getDataUserResult);
             if (getDataUserResult){
               card(item,getDataUserResult);
             }
-          }else{
-            card(item)
-          }
-          
-          
+
         })
       }
     }
