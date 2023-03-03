@@ -30,7 +30,7 @@ const dashboard = document.querySelector("#dashboard");
   imgDiv11.classList.add("float-start");
   imgDiv11.classList.add("me-4");
   imgDiv11.setAttribute("style", "width: 3rem");
-  imgDiv11.src=dataUser.avatarUrl||window.localStorage.getItem("avatarUrl")||"#"; //Avatar del Usuario
+  imgDiv11.src=dataUser?.avatarUrl||window.localStorage.getItem("avatarUrl")||"#"; //Avatar del Usuario
   div11.appendChild(imgDiv11);
   div1.appendChild(div11)
  
@@ -38,7 +38,7 @@ const dashboard = document.querySelector("#dashboard");
   const div12 = document.createElement("div");
   div12.classList.add("container");
   const nombreUSer=document.createElement("h5")
-  nombreUSer.textContent=dataUser.avatarUrl||window.localStorage.getItem("nameUser")||"user"; //Nombre del Usuario
+  nombreUSer.textContent=dataUser?.name||window.localStorage.getItem("nameUser")||"user"; //Nombre del Usuario
   div12.appendChild(nombreUSer)
   const fechaPublicacion=document.createElement("small")
   fechaPublicacion.textContent=publicacion.datePublish||"date"
