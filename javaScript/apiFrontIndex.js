@@ -1,6 +1,13 @@
 import { getLastPost } from "./apiFront.js";
 import { card } from "./card.js";
 
+var dataUserLogged ={
+  name: '',
+  avatarUrl: '',
+  email: '',
+  logged: false
+}
+
 getLastPost()
   .then((dataLastPost) => {
     
@@ -28,3 +35,10 @@ getLastPost()
   .catch((err) => {
     console.log(err);
   });
+
+  if(dataUserLogged.logged){
+    const avatarUserLogo = document.querySelector('#avatarUserLogo');
+    if (avatarUserLogo){
+      avatarUserLogo.src= dataUserLogged.avatarUrl;
+    }
+  }
