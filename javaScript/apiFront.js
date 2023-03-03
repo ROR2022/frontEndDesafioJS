@@ -1,8 +1,10 @@
 console.log('Cargando apiFront:..');
+import { dataUserLogged } from "./apiFrontIndex.js";
 
 const urlImage = document.querySelector('#urlImage');
 const titlePost = document.querySelector('#titlePost');
 const postText = document.querySelector('#postText');
+
 const publishPost = document.querySelector('#publishPost');
 
 //export const publicUrl = 'https://apibackenddesafiojs-production.up.railway.app/';
@@ -17,7 +19,8 @@ if(publishPost){
     const dataPost={
       urlImage: urlImage.value,
       titlePost: titlePost.value,
-      textPost: postText.value.trim()
+      textPost: postText.value.trim(),
+      user: dataUserLogged
     } 
     //getSaludo();
     publishDataPost(dataPost);
