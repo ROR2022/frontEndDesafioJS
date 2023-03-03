@@ -8,7 +8,23 @@ export const dataUserLogged ={
   id: window.localStorage.getItem('idUser')||''
 }
 
-getLastPost()
+const showPosts = async ()=>{
+  try {
+    const getPosts = await getLastPost();
+    if (getPosts){
+      const { lastPost } = getPosts;
+      if (lastPost) {
+        lastPost.map((item)=>{
+          card(item);
+        })
+      }
+    }
+  } catch (error) {
+    console.log (error);
+  }
+}
+
+/*getLastPost()
   .then((dataLastPost) => {
     
     const { lastPost } = dataLastPost;
@@ -34,7 +50,7 @@ getLastPost()
   })
   .catch((err) => {
     console.log(err);
-  });
+  });*/
 
   const botonCreatePost = document.querySelector('#botonCreatePost');
 
@@ -53,6 +69,8 @@ getLastPost()
       botonCreatePost.className = 'd-none';
   }
 
+
+  showPosts();
   
 
   
