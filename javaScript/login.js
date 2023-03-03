@@ -1,6 +1,7 @@
 import { homeFront } from "./apiFront.js";
 import { enviarLogin } from "./apiUser.js";
 import { dataUserLogged } from "./apiFrontIndex.js";
+import { homeFront } from "./apiFront.js";
 
 console.log('Hola desde Login:..');
 
@@ -50,5 +51,7 @@ if (botonLogOut){
           window.localStorage.setItem('nameUser','');
           window.localStorage.setItem('idUser','');
           window.localStorage.setItem('emailUser','');
+
+          window.location.href= homeFront;
     })
 }
