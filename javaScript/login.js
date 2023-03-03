@@ -30,7 +30,7 @@ if (botonLogin){
           const avatarUser = document.querySelector('#imageUserLogged');
           const nameUserLogged = document.querySelector('#nameUserLogged');
 
-          dataContainer.className= 'd-block';
+          dataContainer.className= 'd-block text-center';
           avatarUser.src= dataUserLogged.avatarUrl;
           nameUserLogged.textContent = dataUserLogged.name;
         
