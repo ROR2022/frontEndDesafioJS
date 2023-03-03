@@ -28,7 +28,7 @@ if (botonLogin){
           dataUserLogged.logged= true;
         
       }
-      if (getLogin) window.location.href = homeFront;
+      //if (getLogin) window.location.href = homeFront;
     } catch (error) {
       console.log(error);
     }
