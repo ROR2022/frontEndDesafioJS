@@ -21,7 +21,7 @@ if (botonLogin){
       const getLogin = await enviarLogin(dataUser);
       console.log('getLogin:..',getLogin);
       if (getLogin.findUser?.email){
-          window.localStorage.setItem('avatartUrl',getLogin.findUser.avatarUrl);
+          window.localStorage.setItem('avatarUrl',getLogin.findUser.avatarUrl);
           window.localStorage.setItem('nameUser',getLogin.findUser.name);
           window.localStorage.setItem('idUser',getLogin.findUser._id);
           window.localStorage.setItem('emailUser',getLogin.findUser.email);
