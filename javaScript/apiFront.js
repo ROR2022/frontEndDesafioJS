@@ -9,7 +9,9 @@ const publishPost = document.querySelector('#publishPost');
 
 //export const publicUrl = 'https://apibackenddesafiojs-production.up.railway.app/';
 
-export const publicUrl = 'https://devto-api-raf4-production.up.railway.app/api/v1/posts';
+//export const publicUrl = 'https://devto-api-raf4-production.up.railway.app/api/v1/posts';
+
+ export const publicUrl= 'http://3.145.15.215/api/v1/posts';
 
 export const homeFront = 'https://front-end-desafio-js.vercel.app/';
 
